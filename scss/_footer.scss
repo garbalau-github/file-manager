@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    color: $color-white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 0);
+    background: $color-blue;
+    font-size: 15px;
+
+    &__text {
+        margin: 5px 0 10px 0;
+        font-size: 17px;
+    }
+}

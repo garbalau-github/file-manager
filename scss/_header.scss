@@ -1,0 +1,72 @@
+.header {
+
+    &__buttons, &__rules {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__buttons {
+        bottom: 190px;
+        background-color: rgba($color-black, 0.5);
+        border-radius: 10px;
+    }
+
+    &__rules {
+        bottom: 170px;
+        right: 20px;
+
+        &-rule {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .important-note {
+            color: $color-blue;
+        }
+    }
+    
+    &__list {
+        width: 100%;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        max-width: 700px;
+        margin: 0 auto;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+        transition: all .3s;
+    
+        li {
+            cursor: pointer;
+            padding: 8px;
+            margin: 8px;
+            background-color: $color-white;
+            border: 2px solid navy;
+            border-radius: 5px;
+            transition: all .25s;
+
+            p:first-of-type {
+                margin: 0;
+                line-height: 0.9;
+            }
+
+            .element-name {
+                padding: 3px;
+                border: 1px solid #f2f2f2;
+                max-width: 200px;
+            }
+
+            &:hover {
+
+                .delete, .edit, .add {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

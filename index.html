@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Manager</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/filesystem.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <ul class="header__list" id="list"><!-- Dynamic --></ul>
+
+        <div class="header__buttons">
+
+            <!-- Built-in window for creating elements (top-level) -->
+            <form id="outside-element-create" class="outside-element-create">
+                <input required id="outside-element-input" class="outside-element-input" type="text" placeholder="Enter element name" autocomplete="off">
+                <div class="options">
+                    <span>File<input required id="radio-file-outside" class="radio-button" type="radio" value="file" name="option-outside"></span>
+                    <span>Folder<input id="radio-folder-outside" class="radio-button" type="radio" value="folder" name="option-outside"></span>
+                </div>
+                <button class="button" type="submit">Create element</button>
+            </form>
+            
+            <button class="button" id="display-all-elements">Display elements (F12)</button>
+            <button class="button" id="delete-all-elements">Delete all elements</button>
+        </div>
+
+        <div class="header__rules">
+            <p class="header__rules-rule">1. Use the controls on the <span class="important-note">LEFT</span></p>
+            <p class="header__rules-rule">2. <span class="important-note">Fill up</span> the simple forms and create elements</p>
+            <p class="header__rules-rule">3. <span class="important-note">Hover the elements</span>, and use given options</p>
+            <p class="header__rules-rule">4. Use console (F12) to inspect the <span class="important-note">structure</span> of array</p>
+            <p style="margin: 15px 0 0 0; font-size: 16px;">Click to see example of created structure<a class="button" href="example.html">See example!</a></p>
+        </div>
+    </header>
+
+    <!-- Informational modal window -->
+    <article id="info-modal" class="info-modal">
+        <h2 id="info-modal__subject" class="info-modal__subject"></h2>
+    </article>
+
+    <!-- Confirmation modal for deleting elements -->
+    <form id="delete-modal-form" class="delete-modal-form">
+        <h4>Are you sure?</h4>
+        <div class="buttons">
+            <button class="button" type="submit">Yes</button>
+            <div id="delete-button-close" class="button">No</div>
+        </div>
+    </form>
+
+    <!-- Modal for editing elements name -->
+    <form id="edit-modal-form" class="edit-modal-form">
+        <input id="edit-modal-form-input" class="edit-modal-form-input" autocomplete="off" type="text" placeholder="Enter new name">
+        <div class="buttons">
+            <button class="button" type="submit">Save</button>
+            <button id="edit-button-close" class="button">Cancel</button>
+        </div>
+    </form>
+
+    <!-- Modal window to create elements (nested) -->
+    <form id="add-modal-form" class="add-modal-form">
+        <h3>Type of element</h3>
+        <div class="options">
+            <span>File
+                <input required id="radio-file" class="radio-button" type="radio" value="file" name="option">
+            </span>
+            <span>Folder
+                <input id="radio-folder" class="radio-button" type="radio" value="folder" name="option">
+            </span>
+        </div>
+        <h3>Name the element</h3>
+        <input required id="add-modal-form-input" class="add-modal-form-input" autocomplete="off" type="text" placeholder="Enter new name">
+        <div class="buttons">
+            <button class="button" type="submit">Create</button>
+            <button id="add-button-close" class="button">Cancel</button>
+        </div>
+    </form>
+
+    <footer class="footer">
+        <p class="footer__text">Made with using HTML5, SCSS, Vanilla JS (ES6)</p>
+        <p class="footer__text">If [styles, background, images] are missing, or looking strange, try to recompile styles again from .scss to .css</p>
+    </footer>
+    
+    <script src="js/file_manager_logic.js"></script>
+</body>
+</html>

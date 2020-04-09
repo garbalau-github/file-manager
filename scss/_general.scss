@@ -1,0 +1,89 @@
+body {
+    height: 98vh;
+    font-size: 20px;
+    font-family: sans-serif;
+    background: url('/img/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.folder-css,
+.file-css {
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: 99.9% 2px;
+    transition: all .25s;
+
+    &:hover { 
+        transition: all .25s;
+        background-color: $color-blue;
+        background-size: 55px;
+    }
+}
+
+.folder-css {
+    background-image: url('/img/folder.png');
+}
+
+.file-css {
+    background-image: url('/img/file.png');
+}
+
+.child-css {
+    margin-left: 15px !important;
+
+    &:hover { 
+        background-color: #20639B; 
+    }
+}
+
+.button {
+    width: 200px;
+    display: block;
+    padding: 7px;
+    margin: 15px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: all .25s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: $color-olive;
+    color: $color-black;
+
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.delete, .edit, .add {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    margin: 10px 5px 0 0 !important;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.delete {
+    background: url('/img/icon-delete.png') no-repeat;
+    background-size: cover;
+}
+
+.edit {
+    background: url('/img/icon-edit.png') no-repeat;
+    background-size: cover;
+}
+
+.add {
+    background: url('/img/icon-add.png') no-repeat;
+    background-size: cover;
+}
+
+.hide-child-element {
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+}

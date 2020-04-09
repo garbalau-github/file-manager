@@ -1,0 +1,18 @@
+.template {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+    }
+}

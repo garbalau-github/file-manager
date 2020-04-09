@@ -1,0 +1,155 @@
+@mixin modal {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    transform: translate(0, -350px);
+    transition: all .5s;
+    color: $color-white;
+    background-color: $color-gray-background;
+}
+
+.show-modal {
+    transform: translate(0, 0) !important; 
+}
+
+.info-modal {
+    @include modal();
+
+    &__subject {
+        margin: 0;
+        padding: 15px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+.edit-modal-form {
+    @include modal();
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    &-input {
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .buttons {
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .button {
+            width: 135px;
+            outline: none;
+            margin: 10px auto;
+        }
+    }
+}
+
+.delete-modal-form {
+    @include modal();
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    h4 {
+        text-align: center;
+    }
+
+    .buttons {
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .button {
+            outline: none;
+            margin: 10px auto;
+            width: 120px;
+        }
+    }
+}
+
+.add-modal-form {
+    @include modal();
+    position: absolute;
+    top: 2%;
+    right: 2%;
+
+    h3 {
+        font-size: 20px;
+        margin: 5px;
+    }
+
+    .add-modal-form-input {
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .options, span {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        font-size: 17px;
+        text-align: center;
+
+        .radio-button {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+        }
+    }
+
+    .buttons, span {
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.outside-element-create {
+    background: $color-blue;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+
+    .outside-element-input {
+        position: relative;
+        top: -15px;
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .options, span {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding: 5px;
+        font-size: 17px;
+
+        .radio-button {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+        }
+    }
+}
