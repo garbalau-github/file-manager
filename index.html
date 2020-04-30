@@ -11,11 +11,9 @@
 
     <header class="header">
 
-        <ul class="header__list" id="list"><!-- Dynamic --></ul>
+        <ul class="header__list" id="list"></ul>
 
         <div class="header__buttons">
-
-            <!-- Built-in window for creating elements (top-level) -->
             <form id="outside-element-create" class="outside-element-create">
                 <input required id="outside-element-input" class="outside-element-input" type="text" placeholder="Enter element name" autocomplete="off">
                 <div class="options">
@@ -24,7 +22,6 @@
                 </div>
                 <button class="button" type="submit">Create element</button>
             </form>
-            
             <button class="button" id="display-all-elements">Display elements (F12)</button>
             <button class="button" id="delete-all-elements">Delete all elements</button>
         </div>
@@ -36,14 +33,13 @@
             <p class="header__rules-rule">4. Use console (F12) to inspect the <span class="important-note">structure</span> of array</p>
             <p style="margin: 15px 0 0 0; font-size: 16px;">Click to see example of created structure<a class="button" href="example.html">See example!</a></p>
         </div>
+        
     </header>
 
-    <!-- Informational modal window -->
     <article id="info-modal" class="info-modal">
         <h2 id="info-modal__subject" class="info-modal__subject"></h2>
     </article>
 
-    <!-- Confirmation modal for deleting elements -->
     <form id="delete-modal-form" class="delete-modal-form">
         <h4>Are you sure?</h4>
         <div class="buttons">
@@ -52,7 +48,6 @@
         </div>
     </form>
 
-    <!-- Modal for editing elements name -->
     <form id="edit-modal-form" class="edit-modal-form">
         <input id="edit-modal-form-input" class="edit-modal-form-input" autocomplete="off" type="text" placeholder="Enter new name">
         <div class="buttons">
@@ -61,7 +56,6 @@
         </div>
     </form>
 
-    <!-- Modal window to create elements (nested) -->
     <form id="add-modal-form" class="add-modal-form">
         <h3>Type of element</h3>
         <div class="options">
@@ -79,13 +73,8 @@
             <button id="add-button-close" class="button">Cancel</button>
         </div>
     </form>
-
-    <footer class="footer">
-        <p class="footer__text">Made with using HTML5, SCSS, Vanilla JS (ES6)</p>
-        <p class="footer__text">If [styles, background, images] are missing, or looking strange, try to recompile styles again from .scss to .css</p>
-    </footer>
     
-    <script src="js/dom_elements.js"></script>
-    <script src="js/events_and_functions.js"></script>
+    <script src="js/jquery/jquery.prod.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
